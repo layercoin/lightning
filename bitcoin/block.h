@@ -20,7 +20,7 @@ struct bitcoin_block_hdr {
 	struct sha256_double merkle_hash;
 	le32 timestamp;
 	le32 target;
-	le32 nonce;
+	struct sha256_double nonce;
 };
 
 struct bitcoin_block {

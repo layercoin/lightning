@@ -86,7 +86,19 @@ const struct chainparams networks[] = {
      .p2pkh_version = 111,
      .p2sh_version = 58,
      .testnet = true,
-     .bip32_key_version = {.bip32_pubkey_version = BIP32_VER_TEST_PUBLIC, .bip32_privkey_version = BIP32_VER_TEST_PRIVATE}}
+     .bip32_key_version = {.bip32_pubkey_version = BIP32_VER_TEST_PUBLIC, .bip32_privkey_version = BIP32_VER_TEST_PRIVATE}},
+    {.network_name = "layercoin",
+     .bip173_name = "lc",
+     .genesis_blockhash = {{{.u.u8 = {0x68, 0x8e, 0xde, 0x31, 0x4e, 0x3e, 0xef, 0x3f, 0x0a, 0x7d, 0xdb, 0xe9, 0xba, 0x8a, 0x2f, 0x27, 0xa7, 0x4e, 0x1e, 0x2e, 0x5f, 0xae, 0x4d, 0xe4, 0xbf, 0x51, 0x97, 0x95, 0x35, 0x6e, 0x04, 0x00 }}}},
+     .rpc_port = 9217,
+     .cli = "layercoin-cli",
+     .cli_args = NULL,
+     .dust_limit = { 546 },
+     .max_funding = AMOUNT_SAT_INIT(((1 << 24) - 1)),
+     .max_payment = AMOUNT_MSAT_INIT(0xFFFFFFFFULL),
+     .when_lightning_became_cool = 1,
+     .testnet = false,
+     .bip32_key_version = {.bip32_pubkey_version = BIP32_VER_MAIN_PUBLIC, .bip32_privkey_version = BIP32_VER_MAIN_PRIVATE}}
 };
 
 const struct chainparams *chainparams_for_network(const char *network_name)
