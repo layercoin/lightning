@@ -68,6 +68,7 @@ CCAN_OBJS :=					\
 	ccan-crypto-hkdf.o			\
 	ccan-crypto-ripemd160.o			\
 	ccan-crypto-sha256.o			\
+	ccan-crypto-sha512.o			\
 	ccan-crypto-shachain.o			\
 	ccan-crypto-siphash24.o			\
 	ccan-daemonize.o			\
@@ -128,6 +129,7 @@ CCAN_HEADERS :=						\
 	$(CCANDIR)/ccan/crypto/hmac_sha256/hmac_sha256.h \
 	$(CCANDIR)/ccan/crypto/ripemd160/ripemd160.h	\
 	$(CCANDIR)/ccan/crypto/sha256/sha256.h		\
+	$(CCANDIR)/ccan/crypto/sha512/sha512.h		\
 	$(CCANDIR)/ccan/crypto/shachain/shachain.h	\
 	$(CCANDIR)/ccan/crypto/siphash24/siphash24.h	\
 	$(CCANDIR)/ccan/daemonize/daemonize.h		\
@@ -612,6 +614,8 @@ ccan-crypto-hkdf.o: $(CCANDIR)/ccan/crypto/hkdf_sha256/hkdf_sha256.c
 ccan-crypto-shachain.o: $(CCANDIR)/ccan/crypto/shachain/shachain.c
 	$(CC) $(CFLAGS) -DSHACHAIN_BITS=48 -c -o $@ $<
 ccan-crypto-sha256.o: $(CCANDIR)/ccan/crypto/sha256/sha256.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+ccan-crypto-sha512.o: $(CCANDIR)/ccan/crypto/sha512/sha512.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 ccan-crypto-ripemd160.o: $(CCANDIR)/ccan/crypto/ripemd160/ripemd160.c
 	$(CC) $(CFLAGS) -c -o $@ $<
