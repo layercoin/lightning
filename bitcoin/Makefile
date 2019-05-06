@@ -10,6 +10,7 @@ BITCOIN_SRC :=					\
 	bitcoin/pullpush.c			\
 	bitcoin/script.c			\
 	bitcoin/shadouble.c			\
+	bitcoin/shahash.c			\
 	bitcoin/short_channel_id.c		\
 	bitcoin/signature.c			\
 	bitcoin/tx.c				\
@@ -29,6 +30,7 @@ BITCOIN_HEADERS := bitcoin/address.h		\
 	bitcoin/pullpush.h			\
 	bitcoin/script.h			\
 	bitcoin/shadouble.h			\
+	bitcoin/shahash.h			\
 	bitcoin/short_channel_id.h		\
 	bitcoin/signature.h			\
 	bitcoin/tx.h				\
