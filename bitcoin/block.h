@@ -2,6 +2,7 @@
 #define LIGHTNING_BITCOIN_BLOCK_H
 #include "config.h"
 #include "bitcoin/shadouble.h"
+#include "bitcoin/shahash.h"
 #include <ccan/endian/endian.h>
 #include <ccan/short_types/short_types.h>
 #include <ccan/structeq/structeq.h>
